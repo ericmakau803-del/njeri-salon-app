@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Njeri NeatRoots App</title>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#8e44ad">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app fade-in">
+
+  <!-- HEADER -->
+  <header class="app-header" id="top">
+    <h1>Njeri NeatRoots Studio</h1>
+    <p>Home & mobile hair and nail services</p>
+  </header>
+
+  <!-- IMAGE CAROUSEL -->
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+      <img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4">
+      <img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3">
+      <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250">
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <h2>Hair Services (Fixed)</h2>
+
+    <div class="service-card" onclick="selectService('Twist outs')">Twist outs <span>KES 300</span></div>
+    <div class="service-card" onclick="selectService('Freehand cornrows')">Freehand cornrows <span>KES 150</span></div>
+    <div class="service-card" onclick="selectService('Feed-in cornrows')">Feed-in cornrows <span>KES 400</span></div>
+    <div class="service-card" onclick="selectService('Knotless braids')">Knotless braids <span>KES 700</span></div>
+    <div class="service-card" onclick="selectService('Half cornrows')">Half cornrows <span>KES 500</span></div>
+    <div class="service-card" onclick="selectService('Butterfly locs')">Butterfly locs <span>KES 600</span></div>
+    <div class="service-card" onclick="selectService('Coco twists')">Coco twists <span>KES 500</span></div>
+    <div class="service-card" onclick="selectService('Marley twists')">Marley twists <span>KES 600</span></div>
+    <div class="service-card" onclick="selectService('Crotchet')">Crotchet <span>KES 400</span></div>
+    <div class="service-card" onclick="selectService('Stitch braids')">Stitch braids <span>KES 500</span></div>
+    <div class="service-card" onclick="selectService('Blow-dry')">Blow-dry <span>KES 50</span></div>
+
+    <p class="note">✔ Hair not included • ✔ Fixed prices • ✔ Deposit required for mobile</p>
+
+    <h2>Nail Services (Fixed)</h2>
+
+    <div class="service-card" onclick="selectService('Plain gel polish')">Plain gel polish <span>KES 300</span></div>
+    <div class="service-card" onclick="selectService('Henna')">Henna <span>KES 200</span></div>
+    <div class="service-card" onclick="selectService('Stick-ons gel')">Stick-ons gel <span>KES 400</span></div>
+    <div class="service-card" onclick="selectService('Tips + gel')">Tips + gel <span>KES 500</span></div>
+    <div class="service-card" onclick="selectService('Builder gel')">Builder gel <span>KES 500</span></div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking slide-up" id="booking">
+    <h2>Book Appointment</h2>
+
+    <input type="text" id="name" placeholder="Your Name">
+
+    <select id="service">
+      <option value="">Choose Service</option>
+      <option>Twist outs</option>
+      <option>Freehand cornrows</option>
+      <option>Feed-in cornrows</option>
+      <option>Knotless braids</option>
+      <option>Half cornrows</option>
+      <option>Butterfly locs</option>
+      <option>Coco twists</option>
+      <option>Marley twists</option>
+      <option>Crotchet</option>
+      <option>Stitch braids</option>
+      <option>Blow-dry</option>
+      <option>Plain gel polish</option>
+      <option>Henna</option>
+      <option>Stick-ons gel</option>
+      <option>Tips + gel</option>
+      <option>Builder gel</option>
+    </select>
+
+    <input type="date" id="date">
+    <input type="time" id="time">
+
+    <button onclick="book()">Book via WhatsApp</button>
+  </section>
+
+  <!-- POLICIES -->
+  <section class="policies" id="policy">
+    <h2>Bookings & Policy</h2>
+    <ul>
+      <li>Home & mobile services available</li>
+      <li>Fixed prices only</li>
+      <li>Deposit required for mobile services</li>
+      <li>Respect for time & work</li>
+      <li>🛠 1 week free nail repair</li>
+      <li>After 1 week → repair charged</li>
+    </ul>
+  </section>
+
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <button onclick="scrollToSection('top')">🏠<span>Home</span></button>
+  <button onclick="scrollToSection('services')">💇🏽‍♀️<span>Services</span></button>
+  <button onclick="scrollToSection('booking')">📅<span>Book</span></button>
+  <button onclick="scrollToSection('policy')">📜<span>Policy</span></button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
